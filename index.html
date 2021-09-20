@@ -1,0 +1,105 @@
+<html>
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/openplayerjs@latest/dist/openplayer.min.js"></script>
+    <script type="text/javascript">
+        var url = new URL(window.location.href);
+        var canal = url.searchParams.get("ch");
+        var LIVE_URL = `https://cr-repretel-${canal}-live.ned.media/repretel/${canal}/smil:live.smil/playlist.m3u8`;
+
+        function onPlayerCb(playerInstance) {
+        }
+
+        function startPlayer(videoSrc) {
+            document.body.style = "background-color:black";
+            document.body.innerHTML = `
+            <video class="op-player__media" id="player" controls playsinline >
+                <source src="${videoSrc}" >
+            </video>
+            `;
+            const player = new OpenPlayerJS('player', {
+                startVolume: 1,
+            });
+            player.init();
+
+        }
+
+        switch (canal) {
+            case 'canal2':
+                var _0x5d50 = ['substring', 'split', 'length', 'join']; (function (_0x2fbeca, _0x302170) { var _0x1ae02f = function (_0x1066ee) { while (--_0x1066ee) { _0x2fbeca['push'](_0x2fbeca['shift']()); } }; _0x1ae02f(++_0x302170); }(_0x5d50, 0x14d)); var _0x2fb6 = function (_0x2a2fed, _0x56f2ae) { _0x2a2fed = _0x2a2fed - 0x0; var _0x45aef5 = _0x5d50[_0x2a2fed]; return _0x45aef5; }; function htlpfjevwbqdnuykricszamxog(_0x577235, _0x101774) { var _0x5ba90b = _0x101774[_0x2fb6('0x0')](''); var _0x104575 = _0x5ba90b[_0x2fb6('0x1')]; for (var _0x1b593c = _0x104575 - 0x1; _0x1b593c >= 0x0; _0x1b593c--) { var _0x543598 = _0x1b593c * _0x577235 % _0x104575; var _0x374569 = _0x5ba90b[_0x1b593c]; _0x5ba90b[_0x1b593c] = _0x5ba90b[_0x543598]; _0x5ba90b[_0x543598] = _0x374569; } var _0x322c71 = _0x5ba90b[_0x2fb6('0x2')](''); var _0x3b3d76 = _0x322c71[_0x2fb6('0x3')](_0x104575 - 0x2, _0x104575); if (_0x3b3d76 == 'OK') return _0x322c71[_0x2fb6('0x3')](0x0, _0x104575 - 0x2); return null; }
+                var owdpcafrgmzhivxqjluebnykst = htlpfjevwbqdnuykricszamxog(Math.floor(Date.now() / 3600000), 'da902fO711cdd662cd524656K32dac586da5b79591') || htlpfjevwbqdnuykricszamxog(Math.floor(Date.now() / 3600000) - 1, 'da902fO711cdd662cd524656K32dac586da5b79591');
+                jQuery.get(`https://past-server.nedp.io/token/cr-repretel-${canal}?rsk=` + owdpcafrgmzhivxqjluebnykst)
+                    .done(function (response) {
+                        if (response.token) {
+                            startPlayer(LIVE_URL + '?iut=' + response.token);
+                        } else {
+                            startPlayer(LIVE_URL);
+                        }
+                    })
+                    .fail(function (exception) {
+                        startPlayer(LIVE_URL);
+                    })
+                break;
+            case 'canal4':
+                var _0x5d50 = ['substring', 'split', 'length', 'join']; (function (_0x2fbeca, _0x302170) { var _0x1ae02f = function (_0x1066ee) { while (--_0x1066ee) { _0x2fbeca['push'](_0x2fbeca['shift']()); } }; _0x1ae02f(++_0x302170); }(_0x5d50, 0x14d)); var _0x2fb6 = function (_0x2a2fed, _0x56f2ae) { _0x2a2fed = _0x2a2fed - 0x0; var _0x45aef5 = _0x5d50[_0x2a2fed]; return _0x45aef5; }; function otrjdwgqcukniyhsfaevmlbxpz(_0x577235, _0x101774) { var _0x5ba90b = _0x101774[_0x2fb6('0x0')](''); var _0x104575 = _0x5ba90b[_0x2fb6('0x1')]; for (var _0x1b593c = _0x104575 - 0x1; _0x1b593c >= 0x0; _0x1b593c--) { var _0x543598 = _0x1b593c * _0x577235 % _0x104575; var _0x374569 = _0x5ba90b[_0x1b593c]; _0x5ba90b[_0x1b593c] = _0x5ba90b[_0x543598]; _0x5ba90b[_0x543598] = _0x374569; } var _0x322c71 = _0x5ba90b[_0x2fb6('0x2')](''); var _0x3b3d76 = _0x322c71[_0x2fb6('0x3')](_0x104575 - 0x2, _0x104575); if (_0x3b3d76 == 'OK') return _0x322c71[_0x2fb6('0x3')](0x0, _0x104575 - 0x2); return null; }
+                var ultksyhbwopxdqgnficmvarejz = otrjdwgqcukniyhsfaevmlbxpz(Math.floor(Date.now() / 3600000), '547a6cO8a05451d27a8cd503K319f13bab178fa26b') || otrjdwgqcukniyhsfaevmlbxpz(Math.floor(Date.now() / 3600000) - 1, '547a6cO8a05451d27a8cd503K319f13bab178fa26b');
+                jQuery.get(`https://past-server.nedp.io/token/cr-repretel-${canal}?rsk=` + ultksyhbwopxdqgnficmvarejz)
+                    .done(function (response) {
+                        if (response.token) {
+                            startPlayer(LIVE_URL + '?iut=' + response.token);
+                        } else {
+                            startPlayer(LIVE_URL);
+                        }
+                    })
+                    .fail(function (exception) {
+                        startPlayer(LIVE_URL);
+                    })
+                break;
+            case 'canal6':
+                var _0x5d50 = ['substring', 'split', 'length', 'join']; (function (_0x2fbeca, _0x302170) { var _0x1ae02f = function (_0x1066ee) { while (--_0x1066ee) { _0x2fbeca['push'](_0x2fbeca['shift']()); } }; _0x1ae02f(++_0x302170); }(_0x5d50, 0x14d)); var _0x2fb6 = function (_0x2a2fed, _0x56f2ae) { _0x2a2fed = _0x2a2fed - 0x0; var _0x45aef5 = _0x5d50[_0x2a2fed]; return _0x45aef5; }; function eytpxohcgdlfjamikunbvrzwsq(_0x577235, _0x101774) { var _0x5ba90b = _0x101774[_0x2fb6('0x0')](''); var _0x104575 = _0x5ba90b[_0x2fb6('0x1')]; for (var _0x1b593c = _0x104575 - 0x1; _0x1b593c >= 0x0; _0x1b593c--) { var _0x543598 = _0x1b593c * _0x577235 % _0x104575; var _0x374569 = _0x5ba90b[_0x1b593c]; _0x5ba90b[_0x1b593c] = _0x5ba90b[_0x543598]; _0x5ba90b[_0x543598] = _0x374569; } var _0x322c71 = _0x5ba90b[_0x2fb6('0x2')](''); var _0x3b3d76 = _0x322c71[_0x2fb6('0x3')](_0x104575 - 0x2, _0x104575); if (_0x3b3d76 == 'OK') return _0x322c71[_0x2fb6('0x3')](0x0, _0x104575 - 0x2); return null; }
+                var yogwlvezxfpidbnraquhcjkmst = eytpxohcgdlfjamikunbvrzwsq(Math.floor(Date.now() / 3600000), '333372Oba5deb0c89baeff6eKb49b43406fee4737b') || eytpxohcgdlfjamikunbvrzwsq(Math.floor(Date.now() / 3600000) - 1, '333372Oba5deb0c89baeff6eKb49b43406fee4737b');
+                jQuery.get(`https://past-server.nedp.io/token/cr-repretel-${canal}?rsk=` + yogwlvezxfpidbnraquhcjkmst)
+                    .done(function (response) {
+                        if (response.token) {
+                            startPlayer(LIVE_URL + '?iut=' + response.token);
+                        } else {
+                            startPlayer(LIVE_URL);
+                        }
+                    })
+                    .fail(function (exception) {
+                        startPlayer(LIVE_URL);
+                    })
+                break;
+            case 'canal11':
+                var _0x5d50 = ['substring', 'split', 'length', 'join']; (function (_0x2fbeca, _0x302170) { var _0x1ae02f = function (_0x1066ee) { while (--_0x1066ee) { _0x2fbeca['push'](_0x2fbeca['shift']()); } }; _0x1ae02f(++_0x302170); }(_0x5d50, 0x14d)); var _0x2fb6 = function (_0x2a2fed, _0x56f2ae) { _0x2a2fed = _0x2a2fed - 0x0; var _0x45aef5 = _0x5d50[_0x2a2fed]; return _0x45aef5; }; function ucpqkyhsivwmxtgozenrjfdabl(_0x577235, _0x101774) { var _0x5ba90b = _0x101774[_0x2fb6('0x0')](''); var _0x104575 = _0x5ba90b[_0x2fb6('0x1')]; for (var _0x1b593c = _0x104575 - 0x1; _0x1b593c >= 0x0; _0x1b593c--) { var _0x543598 = _0x1b593c * _0x577235 % _0x104575; var _0x374569 = _0x5ba90b[_0x1b593c]; _0x5ba90b[_0x1b593c] = _0x5ba90b[_0x543598]; _0x5ba90b[_0x543598] = _0x374569; } var _0x322c71 = _0x5ba90b[_0x2fb6('0x2')](''); var _0x3b3d76 = _0x322c71[_0x2fb6('0x3')](_0x104575 - 0x2, _0x104575); if (_0x3b3d76 == 'OK') return _0x322c71[_0x2fb6('0x3')](0x0, _0x104575 - 0x2); return null; }
+                var vptwhasdnoruyxbqgijklmcezf = ucpqkyhsivwmxtgozenrjfdabl(Math.floor(Date.now() / 3600000), 'ee2ad3Of4a8d6c2e79e8f085K72b77005810f5d373') || ucpqkyhsivwmxtgozenrjfdabl(Math.floor(Date.now() / 3600000) - 1, 'ee2ad3Of4a8d6c2e79e8f085K72b77005810f5d373');
+                jQuery.get(`https://past-server.nedp.io/token/cr-repretel-${canal}?rsk=` + vptwhasdnoruyxbqgijklmcezf)
+                    .done(function (response) {
+                        if (response.token) {
+                            startPlayer(LIVE_URL + '?iut=' + response.token);
+                        } else {
+                            startPlayer(LIVE_URL);
+                        }
+                    })
+                    .fail(function (exception) {
+                        startPlayer(LIVE_URL);
+                    })
+                break;
+            default:
+                break;
+        }
+
+
+    </script>
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/openplayerjs@latest/dist/openplayer.min.css">
+</head>
+
+<body>
+
+</body>
+
+</html>
